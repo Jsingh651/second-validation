@@ -1,0 +1,6 @@
+<tr>
+            <td>{{coustmer.name}}</td>
+            <td>{{coustmer.cookie_type}}</td>
+            <td>{{coustmer.num_of_boxes}}</td>
+            <td><a href="/edit/cookie/{{coustmer.id}}">edit</a></td> 
+</tr>

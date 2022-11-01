@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static', filename = 'main.css')}}">
+</head>
+<body>
+  <a href="/">New Order</a>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Coustmer Name</th>
+            <th scope="col">Cookie Type</th>
+            <th scope="col">Numebr of Boxes</th>
+            <th scope="col">Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for order in orders %}
+          <tr>
+            <td>{{order.name}}</td>
+            <td>{{order.type}}</td>
+            <td>{{order.amount}}</td>
+            <td><a href="/edit/{{order.id}}">Edit</a></td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+</body>
+</html>
